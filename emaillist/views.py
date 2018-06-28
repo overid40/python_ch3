@@ -6,12 +6,12 @@ from emaillist.models import Emaillist
 
 def index(request):
     emaillist_list = Emaillist.objects.all().order_by('-id')
-    data = {'emaillist_list':emaillist_list}
-    return render(request, 'index.html', data)
+    data = {'emaillist_list': emaillist_list}
+    return render(request, 'emaillist/index.html', data)
 
 
 def form(request):
-    return render(request, 'form.html')
+    return render(request, 'emaillist/form.html')
 
 
 def add(request):
